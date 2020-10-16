@@ -14,9 +14,11 @@
             Ur message:
             <textarea
                 name = "message"
-                rouws = '5'
-                cols ='20'
+                rouws = '50'
+                cols ='60'
                 [(ngModel)] = "message"></textarea>
         </label>
+        
     </div>
+    <button (click) = "sendMessage()">Send Massge</button>
 </div>
