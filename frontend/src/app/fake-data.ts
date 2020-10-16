@@ -1,4 +1,6 @@
-export const fakeListings = [{
+import {Listing} from "./types";
+//fake data for frontend
+export const fakeListings: Listing[] = [{
     id: '123',
     name: 'Old Boat',
     description: 'A very old boat. Bargain price',

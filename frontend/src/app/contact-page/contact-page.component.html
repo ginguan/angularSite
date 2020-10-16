@@ -1,1 +1,22 @@
-<p>contact-page works!</p>
+<div class = "content-box">
+    <h3>Send the owner a message:</h3>
+    <div>
+        <label>
+            Your Email address:
+            <!--
+                [{ngModel}] create 2 way binding between the text input and the email member variable of component
+            -->
+            <input name = "email" [(ngModel)] = "email"/>
+        </label>
+    </div>
+    <div>
+        <label>
+            Ur message:
+            <textarea
+                name = "message"
+                rouws = '5'
+                cols ='20'
+                [(ngModel)] = "message"></textarea>
+        </label>
+    </div>
+</div>

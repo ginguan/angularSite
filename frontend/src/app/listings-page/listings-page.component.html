@@ -1,1 +1,14 @@
-<p>listings-page works!</p>
+<div>
+    <div class = "content-box" *ngFor = "let listing of listings">
+        <!--
+            *ngFor -- structural diretctive
+            change the structue of HTML on the page depending the underlying data in the ts file
+        http://localhost:4200/listings/listings/345
+        -->
+        <a routerLink = '{{listing.id}}'>
+            <h3>
+                {{listing.name}} - ${{listing.price}}
+            </h3>
+        </a>
+    </div>
+</div>
