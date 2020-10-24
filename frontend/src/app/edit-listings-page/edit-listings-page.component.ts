@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import {Listing} from "../types";
+import {fakeListings} from "../fake-data";
 
 @Component({
   selector: 'app-edit-listings-page',
@@ -8,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class EditListingsPageComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(
+    private route:ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit(): void {
+    //https://angular.io/api/router/ActivatedRouteSnapshot
+    const id  = this.route.snapshot.paramMap.get('id');
+    
   }
   onSubmit():void{
     alert('Saving  changes to the listing...')

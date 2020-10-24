@@ -9,10 +9,6 @@ import { Listing} from '../types';
   styleUrls: ['./new-listings-page.component.css']
 })
 export class NewListingsPageComponent implements OnInit {
-  name:string = '';
-  description :string= '';
-  price:string = '';
-
 
   constructor(private router:Router,) { }
 

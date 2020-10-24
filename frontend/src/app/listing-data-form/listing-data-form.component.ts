@@ -1,6 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Listing } from "../types";
+import { VirtualTimeScheduler } from 'rxjs';
 //this app-listing-data-form is created since the form in create new listing page is similar to edit listing page
 @Component({
   selector: 'app-listing-data-form',
@@ -10,6 +11,10 @@ import { Listing } from "../types";
 export class ListingDataFormComponent implements OnInit {  
 @Input() buttonText;  
 //
+@Input() currentName = '';
+@Input() currentDescription='';
+@Input() currentPrice='';
+
 name:string = '';
 description :string= '';
 price:string = '';
@@ -19,6 +24,9 @@ price:string = '';
 constructor(private router:Router,) { }
 
 ngOnInit(): void {
+  this.name = this.currentName;
+  this.description = this.currentDescription;
+  this.price = this.currentPrice;
 }
 onButtonClicked():void
 {
