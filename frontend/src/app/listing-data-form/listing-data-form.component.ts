@@ -1,6 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Listing } from "../types";
+//this app-listing-data-form is created since the form in create new listing page is similar to edit listing page
 @Component({
   selector: 'app-listing-data-form',
   templateUrl: './listing-data-form.component.html',
@@ -22,6 +23,7 @@ ngOnInit(): void {
 onButtonClicked():void
 {
   this.onSubmit.emit({
+    //output define the data that would be sent
     id :null,
     name:this.name,
     description:this.description,
