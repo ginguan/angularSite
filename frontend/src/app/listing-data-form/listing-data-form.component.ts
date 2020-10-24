@@ -8,9 +8,11 @@ import { Listing } from "../types";
 })
 export class ListingDataFormComponent implements OnInit {  
 @Input() buttonText;  
+//
 name:string = '';
 description :string= '';
 price:string = '';
+
 @Output() onSubmit = new EventEmitter<Listing>();
 
 constructor(private router:Router,) { }
