@@ -1,10 +1,16 @@
 <div class= "content-box">
     <h2>Edit listing</h2>
-    <app-listing-data-form buttonText = "Save Changes"
+    <app-listing-data-form 
+    buttonText = "Save Changes"
+    [currentName] = "listing.name"
+    [currentDescription] = "listing.description"
+    [currentPrice] = "listing.price"
     (onSubmit) ="onSubmit()">
+
+    </app-listing-data-form>
+</div>
     <!--
+        [vairable] directly refer the member variable
         called onSubmit method
         use listing data from
     -->
-    </app-listing-data-form>
-</div>
