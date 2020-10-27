@@ -2,6 +2,11 @@
  
 FontEnd is built using AngularJS for simple product list. (Oct,2020)
 
+To run frontend
+```
+ng serve
+```
+
 ### Components Added
 - contact page
 - edit listing page
